@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "wechat-charts": "github:xiaolin3303/wx-charts"
+  }
+}

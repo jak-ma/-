@@ -1,0 +1,35 @@
+<view class="container">
+  <!-- 生成报告按钮 -->
+  <view class="add-btn-container">
+    <button 
+      class="add-btn" 
+      type="primary" 
+      bindtap="onGenerate"
+    >生成健康报告</button>
+  </view>
+
+  <!-- 健康报告列表 -->
+  <view class="list">
+    <block wx:for="{{reportList}}" wx:key="id">
+      <view class="item">
+        <view class="item-content">
+          <view class="item-title">{{item.title}}</view>
+          <view class="item-time">{{item.time}}</view>
+        </view>
+        <view class="item-actions">
+          <button 
+            class="action-btn view" 
+            size="mini" 
+            bindtap="onView" 
+            data-id="{{item.id}}"
+          >查看</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 空状态提示 -->
+  <view wx:if="{{reportList.length === 0}}" class="empty-tip">
+    暂无健康报告，点击上方按钮生成
+  </view>
+</view>

@@ -1,0 +1,122 @@
+<!-- pages/index/index.wxml -->
+<view class="container">
+  <!-- 加载中 -->
+  <view class="loading" wx:if="{{loading}}">
+    <view class="loading-icon"></view>
+    <text class="loading-text">加载中...</text>
+  </view>
+
+  <!-- 错误提示 -->
+  <view class="error-container" wx:if="{{errorMsg}}">
+    <icon type="warn" size="40"></icon>
+    <text class="error-text">{{errorMsg}}</text>
+    <button class="btn btn-primary" bindtap="checkLoginStatus">重试</button>
+  </view>
+
+  <!-- 主内容区 -->
+  <block wx:if="{{!loading && !errorMsg}}">
+    <!-- 老人选择器 -->
+    <view class="elder-selector card" wx:if="{{elderList.length > 0}}">
+      <view class="elder-selector-title">当前关注老人</view>
+      <picker bindchange="handleElderChange" value="{{selectedElder.id}}" range="{{elderList}}" range-key="name">
+        <view class="elder-picker">
+          <text>{{selectedElder.name}}</text>
+          <text class="elder-age">{{selectedElder.age}}岁</text>
+          <text class="picker-arrow">▼</text>
+        </view>
+      </picker>
+    </view>
+
+    <!-- 添加老人提示 -->
+    <view class="add-elder-tip card" wx:if="{{elderList.length === 0}}">
+      <view class="tip-title">您还没有添加老人信息</view>
+      <view class="tip-desc">添加老人信息后，可以记录和查看健康数据</view>
+      <button class="btn btn-primary" bindtap="addElderInfo">添加老人信息</button>
+    </view>
+
+    <!-- 健康数据概览 -->
+    <view class="health-overview card" wx:if="{{selectedElder}}">
+      <view class="card-header">
+        <text class="title">健康数据概览</text>
+        <text class="more-link" bindtap="navigateToHealthData">查看更多 ></text>
+      </view>
+      <view class="health-data-grid">
+        <!-- 血压 -->
+        <view class="health-data-item">
+          <view class="data-icon blood-pressure-icon"></view>
+          <view class="data-name">血压</view>
+          <view class="data-value" wx:if="{{healthData.bloodPressure}}">{{healthData.bloodPressure}}mmHg</view>
+          <view class="data-value data-empty" wx:else>暂无数据</view>
+        </view>
+        <!-- 血糖 -->
+        <view class="health-data-item">
+          <view class="data-icon blood-sugar-icon"></view>
+          <view class="data-name">血糖</view>
+          <view class="data-value" wx:if="{{healthData.bloodSugar}}">{{healthData.bloodSugar}}mmol/L</view>
+          <view class="data-value data-empty" wx:else>暂无数据</view>
+        </view>
+        <!-- 心率 -->
+        <view class="health-data-item">
+          <view class="data-icon heart-rate-icon"></view>
+          <view class="data-name">心率</view>
+          <view class="data-value" wx:if="{{healthData.heartRate}}">{{healthData.heartRate}}次/分</view>
+          <view class="data-value data-empty" wx:else>暂无数据</view>
+        </view>
+        <!-- 体重 -->
+        <view class="health-data-item">
+          <view class="data-icon weight-icon"></view>
+          <view class="data-name">体重</view>
+          <view class="data-value" wx:if="{{healthData.weight}}">{{healthData.weight}}kg</view>
+          <view class="data-value data-empty" wx:else>暂无数据</view>
+        </view>
+      </view>
+      <button class="btn btn-outline btn-block" bindtap="navigateToHealthReport">查看健康报告</button>
+    </view>
+
+    <!-- 用药提醒 -->
+    <view class="medication-reminder card" wx:if="{{selectedElder}}">
+      <view class="card-header">
+        <text class="title">用药提醒</text>
+        <text class="more-link" bindtap="navigateToMedication">查看更多 ></text>
+      </view>
+      <view class="empty-data" wx:if="{{!recentMedications || recentMedications.length === 0}}">
+        <text>暂无用药提醒</text>
+      </view>
+      <view class="medication-list" wx:else>
+        <view class="medication-item" wx:for="{{recentMedications}}" wx:key="id">
+          <view class="medication-time">{{item.time}}</view>
+          <view class="medication-info">
+            <view class="medication-name">{{item.medicineName}}</view>
+            <view class="medication-dosage">{{item.dosage}}</view>
+          </view>
+          <view class="medication-status {{item.status === 'completed' ? 'status-completed' : ''}}">
+            {{item.status === 'completed' ? '已服用' : '待服用'}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 就诊记录 -->
+    <view class="medical-record card" wx:if="{{selectedElder}}">
+      <view class="card-header">
+        <text class="title">就诊记录</text>
+        <text class="more-link" bindtap="navigateToMedicalRecord">查看更多 ></text>
+      </view>
+      <view class="empty-data" wx:if="{{!upcomingAppointments || upcomingAppointments.length === 0}}">
+        <text>暂无就诊记录</text>
+      </view>
+      <view class="appointment-list" wx:else>
+        <view class="appointment-item" wx:for="{{upcomingAppointments}}" wx:key="id">
+          <view class="appointment-date">{{item.date}}</view>
+          <view class="appointment-info">
+            <view class="appointment-hospital">{{item.hospital}}</view>
+            <view class="appointment-department">{{item.department}}</view>
+          </view>
+          <view class="appointment-status">
+            {{item.status}}
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

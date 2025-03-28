@@ -1,0 +1,46 @@
+<!--pages/userCenter/userCenter.wxml-->
+<view class="container">
+  <view class="user-card" wx:if="{{hasLogin}}" style="height: 222rpx; display: flex; box-sizing: border-box">
+    <image class="avatar" src="/images/user.png"></image>
+    <view class="info">
+      <text class="username">{{userInfo.name || userInfo.username}}</text>
+      <text class="role">{{userInfo.role}}</text>
+    </view>
+  </view>
+
+  <view wx:else class="login-tip">
+    <text>未登录状态</text>
+    <button class="login-btn" bindtap="navigateToLogin" style="position: relative; left: 0rpx; top: 2rpx; height: 95rpx; display: block; box-sizing: border-box">去登录</button>
+  </view>
+  
+  <view class="menu-list">
+    <navigator class="menu-item" url="/pages/health/health" wx:if="{{hasLogin}}" style="height: 179rpx; display: flex; box-sizing: border-box">
+      <text class="menu-text" style="height: 52rpx; display: block; box-sizing: border-box">健康管理</text>
+      <image class="menu-arrow" src="/images/arrow.png"></image>
+    </navigator>
+    
+    <view class="menu-item" bindtap="editProfile" wx:if="{{hasLogin}}" style="height: 181rpx; display: flex; box-sizing: border-box">
+      <text class="menu-text">修改资料</text>
+      <image class="menu-arrow" src="/images/arrow.png"></image>
+    </view>
+    
+    <view class="menu-item" bindtap="changePassword" wx:if="{{hasLogin}}" style="height: 183rpx; display: flex; box-sizing: border-box">
+      <text class="menu-text" style="height: 50rpx; display: block; box-sizing: border-box">修改密码</text>
+      <image class="menu-arrow" src="/images/arrow.png"></image>
+    </view>
+    
+    <view class="menu-item" bindtap="showUsageRules" style="height: 185rpx; display: flex; box-sizing: border-box">
+      <text class="menu-text">使用规则</text>
+      <image class="menu-arrow" src="/images/arrow.png"></image>
+    </view>
+    
+    <view class="menu-item" bindtap="showFAQ" style="height: 183rpx; display: flex; box-sizing: border-box">
+      <text class="menu-text">常见问题</text>
+      <image class="menu-arrow" src="/images/arrow.png"></image>
+    </view>
+  </view>
+  
+  <view class="logout-btn-container" wx:if="{{hasLogin}}" style="height: 91rpx; display: block; box-sizing: content-box">
+    <button class="logout-btn" bindtap="logout" style="position: relative; left: 0rpx; top: 0rpx; height: 102rpx; display: block; box-sizing: border-box">退出登录</button>
+  </view>
+</view>

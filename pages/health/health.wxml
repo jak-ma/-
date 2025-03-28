@@ -1,0 +1,42 @@
+<view class="container">
+  <!-- 添加按钮 -->
+  <view class="add-btn-container">
+    <button 
+      class="add-btn" 
+      type="primary" 
+      bindtap="onAdd"
+    >添加健康数据</button>
+  </view>
+
+  <!-- 健康数据列表 -->
+  <view class="list">
+    <block wx:for="{{healthDataList}}" wx:key="id">
+      <view class="item">
+        <view class="item-content">
+          <view class="item-title">{{item.type}} - {{item.value}}</view>
+          <view class="item-time">{{item.time}}</view>
+        </view>
+        <view class="item-actions">
+          <button 
+            class="action-btn edit" 
+            size="mini" 
+            bindtap="onEdit" 
+            data-id="{{item.id}}"
+          >编辑</button>
+          <button 
+            class="action-btn delete" 
+            size="mini" 
+            type="warn" 
+            bindtap="onDelete" 
+            data-id="{{item.id}}"
+          >删除</button>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <!-- 空状态提示 -->
+  <view wx:if="{{healthDataList.length === 0}}" class="empty-tip">
+    暂无健康数据，点击上方按钮添加
+  </view>
+</view>

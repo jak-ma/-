@@ -1,0 +1,1179 @@
+/**app.wxss**/
+
+/* 全局样式 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 标题样式 */
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+  color: #333;
+}
+
+/* 文本样式 */
+.text-large {
+  font-size: 32rpx;
+}
+
+.text-normal {
+  font-size: 28rpx;
+}
+
+.text-small {
+  font-size: 24rpx;
+}
+
+.text-gray {
+  color: #999;
+}
+
+.text-primary {
+  color: #3A86FF;
+}
+
+.text-success {
+  color: #52C41A;
+}
+
+.text-warning {
+  color: #FAAD14;
+}
+
+.text-danger {
+  color: #FF4D4F;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #3A86FF;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #52C41A;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #FAAD14;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #FF4D4F;
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2rpx solid #3A86FF;
+  color: #3A86FF;
+}
+
+.btn-large {
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 36rpx;
+}
+
+.btn-small {
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 30rpx;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  height: 88rpx;
+  padding: 0 24rpx;
+  border: 2rpx solid #e8e8e8;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 20rpx 24rpx;
+  border: 2rpx solid #e8e8e8;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 200rpx;
+}
+
+/* 布局辅助 */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.mt-10 {
+  margin-top: 10rpx;
+}
+
+.mt-20 {
+  margin-top: 20rpx;
+}
+
+.mt-30 {
+  margin-top: 30rpx;
+}
+
+.mb-10 {
+  margin-bottom: 10rpx;
+}
+
+.mb-20 {
+  margin-bottom: 20rpx;
+}
+
+.mb-30 {
+  margin-bottom: 30rpx;
+}
+
+.ml-10 {
+  margin-left: 10rpx;
+}
+
+.ml-20 {
+  margin-left: 20rpx;
+}
+
+.ml-30 {
+  margin-left: 30rpx;
+}
+
+.mr-10 {
+  margin-right: 10rpx;
+}
+
+.mr-20 {
+  margin-right: 20rpx;
+}
+
+.mr-30 {
+  margin-right: 30rpx;
+}
+
+.p-10 {
+  padding: 10rpx;
+}
+
+.p-20 {
+  padding: 20rpx;
+}
+
+.p-30 {
+  padding: 30rpx;
+}
+
+.pt-10 {
+  padding-top: 10rpx;
+}
+
+.pt-20 {
+  padding-top: 20rpx;
+}
+
+.pt-30 {
+  padding-top: 30rpx;
+}
+
+.pb-10 {
+  padding-bottom: 10rpx;
+}
+
+.pb-20 {
+  padding-bottom: 20rpx;
+}
+
+.pb-30 {
+  padding-bottom: 30rpx;
+}
+
+.pl-10 {
+  padding-left: 10rpx;
+}
+
+.pl-20 {
+  padding-left: 20rpx;
+}
+
+.pl-30 {
+  padding-left: 30rpx;
+}
+
+.pr-10 {
+  padding-right: 10rpx;
+}
+
+.pr-20 {
+  padding-right: 20rpx;
+}
+
+.pr-30 {
+  padding-right: 30rpx;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.wh-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.bg-gray {
+  background-color: #f8f8f8;
+}
+
+.bg-primary {
+  background-color: #3A86FF;
+}
+
+.bg-success {
+  background-color: #52C41A;
+}
+
+.bg-warning {
+  background-color: #FAAD14;
+}
+
+.bg-danger {
+  background-color: #FF4D4F;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.border {
+  border: 2rpx solid #e8e8e8;
+}
+
+.border-top {
+  border-top: 2rpx solid #e8e8e8;
+}
+
+.border-bottom {
+  border-bottom: 2rpx solid #e8e8e8;
+}
+
+.border-left {
+  border-left: 2rpx solid #e8e8e8;
+}
+
+.border-right {
+  border-right: 2rpx solid #e8e8e8;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-radius {
+  border-radius: 8rpx;
+}
+
+.border-radius-lg {
+  border-radius: 12rpx;
+}
+
+.border-radius-xl {
+  border-radius: 16rpx;
+}
+
+.border-radius-circle {
+  border-radius: 50%;
+}
+
+.shadow {
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+.shadow-lg {
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xl {
+  box-shadow: 0 6rpx 30rpx rgba(0, 0, 0, 0.15);
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.overflow-scroll {
+  overflow: scroll;
+}
+
+.overflow-auto {
+  overflow: auto;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-fixed {
+  position: fixed;
+}
+
+.position-sticky {
+  position: sticky;
+}
+
+.z-index-0 {
+  z-index: 0;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.z-index-3 {
+  z-index: 3;
+}
+
+.z-index-4 {
+  z-index: 4;
+}
+
+.z-index-5 {
+  z-index: 5;
+}
+
+.z-index-6 {
+  z-index: 6;
+}
+
+.z-index-7 {
+  z-index: 7;
+}
+
+.z-index-8 {
+  z-index: 8;
+}
+
+.z-index-9 {
+  z-index: 9;
+}
+
+.z-index-10 {
+  z-index: 10;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default;
+}
+
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+
+.cursor-wait {
+  cursor: wait;
+}
+
+.cursor-help {
+  cursor: help;
+}
+
+.cursor-move {
+  cursor: move;
+}
+
+.cursor-text {
+  cursor: text;
+}
+
+.cursor-crosshair {
+  cursor: crosshair;
+}
+
+.cursor-zoom-in {
+  cursor: zoom-in;
+}
+
+.cursor-zoom-out {
+  cursor: zoom-out;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.cursor-col-resize {
+  cursor: col-resize;
+}
+
+.cursor-row-resize {
+  cursor: row-resize;
+}
+
+.cursor-n-resize {
+  cursor: n-resize;
+}
+
+.cursor-s-resize {
+  cursor: s-resize;
+}
+
+.cursor-e-resize {
+  cursor: e-resize;
+}
+
+.cursor-w-resize {
+  cursor: w-resize;
+}
+
+.cursor-ne-resize {
+  cursor: ne-resize;
+}
+
+.cursor-nw-resize {
+  cursor: nw-resize;
+}
+
+.cursor-se-resize {
+  cursor: se-resize;
+}
+
+.cursor-sw-resize {
+  cursor: sw-resize;
+}
+
+.cursor-ew-resize {
+  cursor: ew-resize;
+}
+
+.cursor-ns-resize {
+  cursor: ns-resize;
+}
+
+.cursor-nesw-resize {
+  cursor: nesw-resize;
+}
+
+.cursor-nwse-resize {
+  cursor: nwse-resize;
+}
+
+.cursor-alias {
+  cursor: alias;
+}
+
+.cursor-copy {
+  cursor: copy;
+}
+
+.cursor-no-drop {
+  cursor: no-drop;
+}
+
+.cursor-progress {
+  cursor: progress;
+}
+
+.cursor-cell {
+  cursor: cell;
+}
+
+.cursor-context-menu {
+  cursor: context-menu;
+}
+
+.cursor-vertical-text {
+  cursor: vertical-text;
+}
+
+.cursor-all-scroll {
+  cursor: all-scroll;
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+.cursor-inherit {
+  cursor: inherit;
+}
+
+.cursor-initial {
+  cursor: initial;
+}
+
+.cursor-unset {
+  cursor: unset;
+}
+
+.cursor-zoom {
+  cursor: zoom;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.cursor-col-resize {
+  cursor: col-resize;
+}
+
+.cursor-row-resize {
+  cursor: row-resize;
+}
+
+.cursor-n-resize {
+  cursor: n-resize;
+}
+
+.cursor-s-resize {
+  cursor: s-resize;
+}
+
+.cursor-e-resize {
+  cursor: e-resize;
+}
+
+.cursor-w-resize {
+  cursor: w-resize;
+}
+
+.cursor-ne-resize {
+  cursor: ne-resize;
+}
+
+.cursor-nw-resize {
+  cursor: nw-resize;
+}
+
+.cursor-se-resize {
+  cursor: se-resize;
+}
+
+.cursor-sw-resize {
+  cursor: sw-resize;
+}
+
+.cursor-ew-resize {
+  cursor: ew-resize;
+}
+
+.cursor-ns-resize {
+  cursor: ns-resize;
+}
+
+.cursor-nesw-resize {
+  cursor: nesw-resize;
+}
+
+.cursor-nwse-resize {
+  cursor: nwse-resize;
+}
+
+.cursor-alias {
+  cursor: alias;
+}
+
+.cursor-copy {
+  cursor: copy;
+}
+
+.cursor-no-drop {
+  cursor: no-drop;
+}
+
+.cursor-progress {
+  cursor: progress;
+}
+
+.cursor-cell {
+  cursor: cell;
+}
+
+.cursor-context-menu {
+  cursor: context-menu;
+}
+
+.cursor-vertical-text {
+  cursor: vertical-text;
+}
+
+.cursor-all-scroll {
+  cursor: all-scroll;
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+.cursor-inherit {
+  cursor: inherit;
+}
+
+.cursor-initial {
+  cursor: initial;
+}
+
+.cursor-unset {
+  cursor: unset;
+}
+
+.cursor-zoom {
+  cursor: zoom;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.cursor-col-resize {
+  cursor: col-resize;
+}
+
+.cursor-row-resize {
+  cursor: row-resize;
+}
+
+.cursor-n-resize {
+  cursor: n-resize;
+}
+
+.cursor-s-resize {
+  cursor: s-resize;
+}
+
+.cursor-e-resize {
+  cursor: e-resize;
+}
+
+.cursor-w-resize {
+  cursor: w-resize;
+}
+
+.cursor-ne-resize {
+  cursor: ne-resize;
+}
+
+.cursor-nw-resize {
+  cursor: nw-resize;
+}
+
+.cursor-se-resize {
+  cursor: se-resize;
+}
+
+.cursor-sw-resize {
+  cursor: sw-resize;
+}
+
+.cursor-ew-resize {
+  cursor: ew-resize;
+}
+
+.cursor-ns-resize {
+  cursor: ns-resize;
+}
+
+.cursor-nesw-resize {
+  cursor: nesw-resize;
+}
+
+.cursor-nwse-resize {
+  cursor: nwse-resize;
+}
+
+.cursor-alias {
+  cursor: alias;
+}
+
+.cursor-copy {
+  cursor: copy;
+}
+
+.cursor-no-drop {
+  cursor: no-drop;
+}
+
+.cursor-progress {
+  cursor: progress;
+}
+
+.cursor-cell {
+  cursor: cell;
+}
+
+.cursor-context-menu {
+  cursor: context-menu;
+}
+
+.cursor-vertical-text {
+  cursor: vertical-text;
+}
+
+.cursor-all-scroll {
+  cursor: all-scroll;
+}
+
+.cursor-none {
+  cursor: none;
+}
+
+.cursor-inherit {
+  cursor: inherit;
+}
+
+.cursor-initial {
+  cursor: initial;
+}
+
+.cursor-unset {
+  cursor: unset;
+}
+
+.cursor-zoom {
+  cursor: zoom;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+.cursor-col-resize {
+  cursor: col-resize;
+}
+
+.cursor-row-resize {
+  cursor: row-resize;
+}
+
+.cursor-n-resize {
+  cursor: n-resize;
+}
+
+.cursor-s-resize {
+  cursor: s-resize;
+}
+
+.cursor-e-resize {
+  cursor: e-resize;
+}
+
+.cursor-w-resize {
+  cursor: w-resize;
+}
+
+.cursor-ne-resize {
+  cursor: ne-resize;
+}
+
+.cursor-nw-resize {
+  cursor: nw-resize;
+}
+
+.cursor-se-resize {
+  cursor: se-resize;
+}
+
+.cursor-sw-resize {
+  cursor: sw-resize;
+}
+
+.cursor-ew-resize {
+  cursor: ew-resize;
+}
+
+.cursor-ns-resize
+/**app.wxss**/
+
+/* 全局样式 */
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 容器 */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+/* 卡片样式 */
+.card {
+  background-color: #fff;
+  border-radius: 12rpx;
+  padding: 30rpx;
+  margin-bottom: 30rpx;
+  box-shadow: 0 2rpx 10rpx rgba(0, 0, 0, 0.05);
+}
+
+/* 标题样式 */
+.title {
+  font-size: 36rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+  color: #333;
+}
+
+/* 文本样式 */
+.text-large {
+  font-size: 32rpx;
+}
+
+.text-normal {
+  font-size: 28rpx;
+}
+
+.text-small {
+  font-size: 24rpx;
+}
+
+.text-gray {
+  color: #999;
+}
+
+.text-primary {
+  color: #3A86FF;
+}
+
+.text-success {
+  color: #52C41A;
+}
+
+.text-warning {
+  color: #FAAD14;
+}
+
+.text-danger {
+  color: #FF4D4F;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+/* 按钮样式 */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-block {
+  display: flex;
+  width: 100%;
+}
+
+.btn-primary {
+  background-color: #3A86FF;
+  color: #fff;
+}
+
+.btn-success {
+  background-color: #52C41A;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #FAAD14;
+  color: #fff;
+}
+
+.btn-danger {
+  background-color: #FF4D4F;
+  color: #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2rpx solid #3A86FF;
+  color: #3A86FF;
+}
+
+.btn-large {
+  height: 96rpx;
+  line-height: 96rpx;
+  font-size: 36rpx;
+}
+
+.btn-small {
+  height: 72rpx;
+  line-height: 72rpx;
+  font-size: 28rpx;
+}
+
+/* 表单样式 */
+.form-group {
+  margin-bottom: 30rpx;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 16rpx;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  height: 88rpx;
+  padding: 0 24rpx;
+  border: 2rpx solid #e8e8e8;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 20rpx 24rpx;
+  border: 2rpx solid #e8e8e8;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #333;
+  background-color: #fff;
+  box-sizing: border-box;
+  min-height: 200rpx;
+}
+
+/* 布局辅助 */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}

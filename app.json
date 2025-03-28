@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/elderInfo/elderInfo",
+    "pages/healthData/healthData",
+    "pages/healthReport/healthReport",
+    "pages/medication/medication",
+    "pages/medicalRecord/medicalRecord",
+    "pages/userCenter/userCenter"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3A86FF",
+    "navigationBarTitleText": "颐康管家",
+    "navigationBarTextStyle": "white",
+    "crossOrigin": "isolated"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#3A86FF",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/healthData/healthData",
+        "text": "健康数据",
+        "iconPath": "images/health.png",
+        "selectedIconPath": "images/health_selected.png"
+      },
+      {
+        "pagePath": "pages/medication/medication",
+        "text": "用药提醒",
+        "iconPath": "images/medicine.png",
+        "selectedIconPath": "images/medicine_selected.png"
+      },
+      {
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user_selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

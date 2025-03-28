@@ -1,0 +1,40 @@
+<view class="container">
+  <!-- 报告标题 -->
+  <view class="title">{{report.title}}</view>
+  
+  <!-- 报告时间 -->
+  <view class="time">{{report.time}}</view>
+
+  <!-- 报告内容 -->
+  <view class="content">
+    <view class="section">
+      <view class="section-title">健康数据概览</view>
+      <view class="section-content">
+        <block wx:for="{{report.summary}}" wx:key="type">
+          <view class="data-item">
+            <text class="data-label">{{item.type}}：</text>
+            <text class="data-value">{{item.value}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">健康趋势分析</view>
+      <view class="section-content">
+        <canvas canvas-id="trendChart" class="chart"></canvas>
+      </view>
+    </view>
+
+    <view class="section">
+      <view class="section-title">健康建议</view>
+      <view class="section-content">
+        <block wx:for="{{report.suggestions}}" wx:key="index">
+          <view class="suggestion-item">
+            {{item}}
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

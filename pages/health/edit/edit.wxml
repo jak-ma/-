@@ -1,0 +1,51 @@
+<view class="container">
+  <form bindsubmit="onSubmit">
+    <!-- 健康数据类型 -->
+    <view class="form-item">
+      <view class="label">数据类型</view>
+      <picker 
+        mode="selector" 
+        range="{{healthTypes}}" 
+        range-key="name"
+        bindchange="onTypeChange"
+      >
+        <view class="picker">
+          {{selectedType.name || '请选择数据类型'}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 健康数据值 -->
+    <view class="form-item">
+      <view class="label">数据值</view>
+      <input 
+        name="value"
+        type="number"
+        placeholder="请输入数据值"
+        placeholder-class="placeholder"
+      />
+    </view>
+
+    <!-- 记录时间 -->
+    <view class="form-item">
+      <view class="label">记录时间</view>
+      <picker 
+        mode="date" 
+        fields="day"
+        bindchange="onDateChange"
+      >
+        <view class="picker">
+          {{date || '请选择日期'}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 保存按钮 -->
+    <view class="form-item">
+      <button 
+        formType="submit" 
+        type="primary"
+      >保存</button>
+    </view>
+  </form>
+</view>

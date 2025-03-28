@@ -1,0 +1,41 @@
+.container {
+  padding: 20rpx;
+}
+
+.form-item {
+  margin-bottom: 40rpx;
+}
+
+.label {
+  display: block;
+  margin-bottom: 16rpx;
+  color: #333;
+  font-size: 32rpx;
+}
+
+.picker {
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+  color: #333;
+}
+
+input {
+  height: 80rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 8rpx;
+  font-size: 32rpx;
+}
+
+.placeholder {
+  color: #999;
+}
+
+button {
+  margin-top: 40rpx;
+  font-size: 32rpx;
+}

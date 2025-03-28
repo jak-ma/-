@@ -1,0 +1,270 @@
+/* pages/index/index.wxss */
+
+/* 加载中样式 */
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60rpx 0;
+}
+
+.loading-icon {
+  width: 80rpx;
+  height: 80rpx;
+  border: 6rpx solid #f3f3f3;
+  border-top: 6rpx solid #3A86FF;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20rpx;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+/* 错误提示样式 */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60rpx 30rpx;
+}
+
+.error-text {
+  font-size: 30rpx;
+  color: #FF4D4F;
+  margin: 30rpx 0;
+  text-align: center;
+}
+
+/* 老人选择器样式 */
+.elder-selector {
+  margin-bottom: 30rpx;
+}
+
+.elder-selector-title {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 16rpx;
+}
+
+.elder-picker {
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.elder-age {
+  font-size: 28rpx;
+  color: #999;
+  margin-left: 20rpx;
+  font-weight: normal;
+}
+
+.picker-arrow {
+  margin-left: auto;
+  color: #999;
+  font-size: 24rpx;
+}
+
+/* 添加老人提示样式 */
+.add-elder-tip {
+  padding: 40rpx 30rpx;
+  text-align: center;
+}
+
+.tip-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-bottom: 16rpx;
+}
+
+.tip-desc {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 30rpx;
+}
+
+/* 健康数据概览样式 */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.more-link {
+  font-size: 28rpx;
+  color: #3A86FF;
+}
+
+.health-data-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+.health-data-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20rpx;
+  background-color: #f8f8f8;
+  border-radius: 8rpx;
+}
+
+.data-icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin-bottom: 16rpx;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.blood-pressure-icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNBODZGRiI+PHBhdGggZD0iTTEyLDJDNi40OCwyIDIsNi40OCAyLDEyQzIsMTcuNTIgNi40OCwyMiAxMiwyMkMxNy41MiwyMiAyMiwxNy41MiAyMiwxMkMyMiw2LjQ4IDE3LjUyLDIgMTIsMk0xMiw1QzEzLjY2LDUgMTUsNi4zNCAxNSw4QzE1LDkuNjYgMTMuNjYsMTEgMTIsMTFDMTAuMzQsMTEgOSw5LjY2IDksOEM5LDYuMzQgMTAuMzQsNSAxMiw1TTEyLDE5LjJDOS41LDE5LjIgNy4yOSwxNy45MiA2LDE2QzYuMDMsMTQgMTAsMTIuOSAxMiwxMi45QzE0LDEyLjkgMTcuOTcsMTQgMTgsMTZDMTYuNzEsMTcuOTIgMTQuNSwxOS4yIDEyLDE5LjJaIi8+PC9zdmc+');
+}
+
+.blood-sugar-icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNBODZGRiI+PHBhdGggZD0iTTEyLDJDNi40OCwyIDIsNi40OCAyLDEyQzIsMTcuNTIgNi40OCwyMiAxMiwyMkMxNy41MiwyMiAyMiwxNy41MiAyMiwxMkMyMiw2LjQ4IDE3LjUyLDIgMTIsMk0xMiw1QzEzLjY2LDUgMTUsNi4zNCAxNSw4QzE1LDkuNjYgMTMuNjYsMTEgMTIsMTFDMTAuMzQsMTEgOSw5LjY2IDksOEM5LDYuMzQgMTAuMzQsNSAxMiw1TTEyLDE5LjJDOS41LDE5LjIgNy4yOSwxNy45MiA2LDE2QzYuMDMsMTQgMTAsMTIuOSAxMiwxMi45QzE0LDEyLjkgMTcuOTcsMTQgMTgsMTZDMTYuNzEsMTcuOTIgMTQuNSwxOS4yIDEyLDE5LjJaIi8+PC9zdmc+');
+}
+
+.heart-rate-icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNBODZGRiI+PHBhdGggZD0iTTEyLDJDNi40OCwyIDIsNi40OCAyLDEyQzIsMTcuNTIgNi40OCwyMiAxMiwyMkMxNy41MiwyMiAyMiwxNy41MiAyMiwxMkMyMiw2LjQ4IDE3LjUyLDIgMTIsMk0xMiw1QzEzLjY2LDUgMTUsNi4zNCAxNSw4QzE1LDkuNjYgMTMuNjYsMTEgMTIsMTFDMTAuMzQsMTEgOSw5LjY2IDksOEM5LDYuMzQgMTAuMzQsNSAxMiw1TTEyLDE5LjJDOS41LDE5LjIgNy4yOSwxNy45MiA2LDE2QzYuMDMsMTQgMTAsMTIuOSAxMiwxMi45QzE0LDEyLjkgMTcuOTcsMTQgMTgsMTZDMTYuNzEsMTcuOTIgMTQuNSwxOS4yIDEyLDE5LjJaIi8+PC9zdmc+');
+}
+
+.weight-icon {
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzNBODZGRiI+PHBhdGggZD0iTTEyLDJDNi40OCwyIDIsNi40OCAyLDEyQzIsMTcuNTIgNi40OCwyMiAxMiwyMkMxNy41MiwyMiAyMiwxNy41MiAyMiwxMkMyMiw2LjQ4IDE3LjUyLDIgMTIsMk0xMiw1QzEzLjY2LDUgMTUsNi4zNCAxNSw4QzE1LDkuNjYgMTMuNjYsMTEgMTIsMTFDMTAuMzQsMTEgOSw5LjY2IDksOEM5LDYuMzQgMTAuMzQsNSAxMiw1TTEyLDE5LjJDOS41LDE5LjIgNy4yOSwxNy45MiA2LDE2QzYuMDMsMTQgMTAsMTIuOSAxMiwxMi45QzE0LDEyLjkgMTcuOTcsMTQgMTgsMTZDMTYuNzEsMTcuOTIgMTQuNSwxOS4yIDEyLDE5LjJaIi8+PC9zdmc+');
+}
+
+.data-name {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.data-value {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.data-empty {
+  color: #999;
+  font-weight: normal;
+  font-size: 28rpx;
+}
+
+/* 用药提醒样式 */
+.empty-data {
+  padding: 40rpx 0;
+  text-align: center;
+  color: #999;
+  font-size: 28rpx;
+}
+
+.medication-list {
+  margin-top: 20rpx;
+}
+
+.medication-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.medication-item:last-child {
+  border-bottom: none;
+}
+
+.medication-time {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.medication-info {
+  flex: 1;
+}
+
+.medication-name {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.medication-dosage {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.medication-status {
+  font-size: 26rpx;
+  color: #FAAD14;
+  padding: 4rpx 12rpx;
+  background-color: rgba(250, 173, 20, 0.1);
+  border-radius: 4rpx;
+}
+
+.status-completed {
+  color: #52C41A;
+  background-color: rgba(82, 196, 26, 0.1);
+}
+
+/* 就诊记录样式 */
+.appointment-list {
+  margin-top: 20rpx;
+}
+
+.appointment-item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #f0f0f0;
+}
+
+.appointment-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-date {
+  width: 160rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.appointment-info {
+  flex: 1;
+}
+
+.appointment-hospital {
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.appointment-department {
+  font-size: 26rpx;
+  color: #999;
+}
+
+.appointment-status {
+  font-size: 26rpx;
+  color: #3A86FF;
+  padding: 4rpx 12rpx;
+  background-color: rgba(58, 134, 255, 0.1);
+  border-radius: 4rpx;
+}

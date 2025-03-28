@@ -1,0 +1,45 @@
+<view class="container">
+  <form bindsubmit="onSubmit">
+    <!-- 药品名称 -->
+    <view class="form-item">
+      <view class="label">药品名称</view>
+      <input 
+        name="medicineName"
+        placeholder="请输入药品名称"
+        placeholder-class="placeholder"
+      />
+    </view>
+
+    <!-- 用药时间 -->
+    <view class="form-item">
+      <view class="label">用药时间</view>
+      <picker 
+        mode="time" 
+        bindchange="onTimeChange"
+      >
+        <view class="picker">
+          {{time || '请选择用药时间'}}
+        </view>
+      </picker>
+    </view>
+
+    <!-- 剂量 -->
+    <view class="form-item">
+      <view class="label">剂量</view>
+      <input 
+        name="dosage"
+        type="number"
+        placeholder="请输入剂量"
+        placeholder-class="placeholder"
+      />
+    </view>
+
+    <!-- 保存按钮 -->
+    <view class="form-item">
+      <button 
+        formType="submit" 
+        type="primary"
+      >保存</button>
+    </view>
+  </form>
+</view>
