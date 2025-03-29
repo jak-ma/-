@@ -2,6 +2,7 @@
   "pages": [
     "pages/login/login",
     "pages/index/index",
+    "pages/register/register", 
     "pages/elderInfo/elderInfo",
     "pages/healthData/healthData",
     "pages/healthReport/healthReport",
